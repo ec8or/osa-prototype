@@ -384,6 +384,9 @@ h1 em { color: var(--gold); font-style: normal; }
   .demo-form { position: static; }
   .facility-grid { grid-template-columns: 1fr; }
   .facility-card + .facility-card { border-left: 0; border-top: 1px solid var(--ink); }
+  .facility-card { min-height: 0; padding: 1.8rem 1.5rem; }
+  .facility-card h3 { margin: 2.2rem 0 .8rem; }
+  .facility-card p { margin-bottom: 1.4rem; }
   .site-footer { grid-template-columns: 1.5fr 1fr 1fr; }
   .site-footer > div:last-of-type { grid-column: 2; }
   .subpage-hero { grid-template-columns: 1fr; }
@@ -418,8 +421,13 @@ h1 em { color: var(--gold); font-style: normal; }
   .juice-item { grid-template-columns: 30px 1fr; }
   .juice-item i { display: none; }
   .class-grid { grid-template-columns: 1fr; }
-  .class-card { min-height: 350px; border-right-color: var(--ink); }
-  .class-card-featured { min-height: 430px; }
+  /* Compact cards on mobile: height comes from content, label/number stays
+     at the top with the content directly beneath — no poster void. The photo
+     card keeps its height because the image fills it. */
+  .class-card { min-height: 0; padding: 3.4rem 1.5rem 1.8rem; border-right-color: var(--ink); }
+  .class-card-photo { min-height: 340px; }
+  .class-number { top: 1.5rem; left: 1.5rem; }
+  .class-content a { margin-top: 1.4rem; }
   .coach-photo { min-height: 520px; }
   .coach-copy { min-height: auto; padding-block: 5rem; }
   .credentials { grid-template-columns: 1fr; }
@@ -428,12 +436,14 @@ h1 em { color: var(--gold); font-style: normal; }
   .filter-row { overflow-x: auto; padding-bottom: .4rem; }
   .filter { flex: 0 0 auto; }
   .schedule-day { grid-template-columns: 58px 1fr; }
-  .schedule-day > header { padding-right: .5rem; }
-  .schedule-day > header span { display: block; font-family: var(--display); font-size: 1.4rem; text-transform: uppercase; }
+  /* Day label and session rows share the same top padding and tight line
+     heights so MON lines up with the first session's time. */
+  .schedule-day > header { padding: 1.35rem .5rem 1.35rem 0; }
+  .schedule-day > header span { display: block; font-family: var(--display); font-size: 1.4rem; line-height: 1.05; text-transform: uppercase; }
   .schedule-day > header b { display: none; }
-  .session { min-height: 88px; grid-template-columns: 68px 1fr; gap: .5rem; }
+  .session { min-height: 0; padding-block: 1.35rem; grid-template-columns: 68px 1fr; gap: .5rem; align-items: start; }
   .session i { display: none; }
-  .session time { font-size: 1.3rem; }
+  .session time { font-size: 1.3rem; line-height: 1.05; }
   .session b { font-size: .75rem; }
   .first-session-grid { gap: 3rem; }
   .field-row { grid-template-columns: 1fr; }
@@ -457,7 +467,8 @@ h1 em { color: var(--gold); font-style: normal; }
   .page-cta { gap: 2rem; }
   .page-cta .button { width: 100%; }
   .schedule-footer { align-items: flex-start; flex-direction: column; }
-  .price-card { min-height: 360px; }
+  .price-card { min-height: 0; padding: 1.8rem 1.5rem; }
+  .price-card h2 { margin-top: 1.6rem; }
   .coach-profile-card > img { min-height: 520px; }
   .gallery-grid .gallery-wide { grid-column: auto; min-height: 500px; }
   .gallery-grid figure { min-height: 430px; }
