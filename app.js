@@ -24,6 +24,7 @@ if (tickerTrack && tickerGroup) {
 
 const filters = document.querySelectorAll('[data-filter]');
 const sessions = document.querySelectorAll('[data-audience]');
+const scheduleDays = document.querySelectorAll('.schedule-day');
 
 filters.forEach((button) => {
   button.addEventListener('click', () => {
@@ -37,6 +38,10 @@ filters.forEach((button) => {
 
     sessions.forEach((session) => {
       session.hidden = selected !== 'all' && session.dataset.audience !== selected;
+    });
+
+    scheduleDays.forEach((day) => {
+      day.hidden = ![...day.querySelectorAll('[data-audience]')].some((session) => !session.hidden);
     });
   });
 });
@@ -57,7 +62,8 @@ demoForm?.addEventListener('submit', (event) => {
   const data = new FormData(demoForm);
   const name = String(data.get('name') || '').trim().split(' ')[0];
   const interest = data.get('interest');
+  const enquiryLabel = interest === 'Not sure' ? 'class' : interest;
 
-  formStatus.textContent = `Nice one${name ? `, ${name}` : ''} — in the live site this would send a ${interest} enquiry to OSA.`;
+  formStatus.textContent = `Nice one${name ? `, ${name}` : ''} — on the live site this would send your ${enquiryLabel} enquiry to OSA.`;
   formStatus.classList.add('success');
 });
