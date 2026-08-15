@@ -343,6 +343,11 @@ h1 em { color: var(--gold); font-style: normal; }
 
 .contact-layout { max-width: var(--max); margin: 0 auto; padding: clamp(5rem, 9vw, 9rem) var(--pad); display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(3rem, 8vw, 8rem); background: var(--gold); align-items: start; }
 .contact-layout .demo-form { top: 116px; }
+.contact-layout .kicker { color: var(--ink); }
+.member-quotes { margin-top: 3rem; }
+.member-quotes blockquote { margin: 0 0 1.5rem; padding-left: 1rem; border-left: 2px solid var(--ink); }
+.member-quotes blockquote p { margin: 0; max-width: 460px; font-size: .95rem; font-weight: 650; line-height: 1.55; }
+.member-quotes cite { display: block; margin-top: .45rem; color: #514b3e; font-size: .66rem; font-style: normal; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; }
 .contact-options { margin-top: 2rem; display: flex; gap: 1.5rem; flex-wrap: wrap; }
 .contact-options a { font-size: .74rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; text-underline-offset: 5px; }
 .demo-form textarea { width: 100%; padding: 1rem; resize: vertical; border: 1px solid #aaa69d; border-radius: 0; background: var(--white); font: inherit; line-height: 1.5; }
