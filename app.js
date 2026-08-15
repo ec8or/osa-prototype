@@ -13,6 +13,15 @@ menuButton?.addEventListener('click', () => {
 
 navLinks.forEach((link) => link.addEventListener('click', closeMenu));
 
+const tickerTrack = document.querySelector('[data-ticker-track]');
+const tickerGroup = tickerTrack?.querySelector('.ticker-group');
+
+if (tickerTrack && tickerGroup) {
+  const repeatedGroup = tickerGroup.cloneNode(true);
+  repeatedGroup.setAttribute('aria-hidden', 'true');
+  tickerTrack.append(repeatedGroup);
+}
+
 const filters = document.querySelectorAll('[data-filter]');
 const sessions = document.querySelectorAll('[data-audience]');
 
@@ -29,6 +38,14 @@ filters.forEach((button) => {
     sessions.forEach((session) => {
       session.hidden = selected !== 'all' && session.dataset.audience !== selected;
     });
+  });
+});
+
+sessions.forEach((session) => {
+  session.addEventListener('click', () => {
+    const interest = session.dataset.interest;
+    const matchingChoice = document.querySelector(`input[name="interest"][value="${interest}"]`);
+    if (matchingChoice) matchingChoice.checked = true;
   });
 });
 
