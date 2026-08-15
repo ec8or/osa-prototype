@@ -54,16 +54,25 @@ sessions.forEach((session) => {
   });
 });
 
-const demoForm = document.querySelector('[data-demo-form]');
+const enquiryForm = document.querySelector('[data-enquiry-form]');
 const formStatus = document.querySelector('[data-form-status]');
 
-demoForm?.addEventListener('submit', (event) => {
+enquiryForm?.addEventListener('submit', (event) => {
   event.preventDefault();
-  const data = new FormData(demoForm);
-  const name = String(data.get('name') || '').trim().split(' ')[0];
-  const interest = data.get('interest');
-  const enquiryLabel = interest === 'Not sure' ? 'class' : interest;
+  const data = new FormData(enquiryForm);
+  const name = String(data.get('name') || '').trim();
+  const contact = String(data.get('contact') || '').trim();
+  const interest = String(data.get('interest') || 'Not sure');
+  const note = String(data.get('message') || '').trim();
+  const message = [
+    `Hi OSA, I’d like to enquire about a first class.`,
+    `Name: ${name}`,
+    `Contact: ${contact}`,
+    `Interested in: ${interest}`,
+    note ? `Message: ${note}` : '',
+  ].filter(Boolean).join('\n');
 
-  formStatus.textContent = `Nice one${name ? `, ${name}` : ''} — on the live site this would send your ${enquiryLabel} enquiry to OSA.`;
+  formStatus.textContent = 'Opening WhatsApp with your enquiry. You can check it before sending.';
   formStatus.classList.add('success');
+  window.location.href = `https://wa.me/447753249450?text=${encodeURIComponent(message)}`;
 });
