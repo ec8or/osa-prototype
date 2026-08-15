@@ -92,14 +92,14 @@ h1 em { color: var(--gold); font-style: normal; }
 .juice-bar {
   max-width: var(--max); margin: 0 auto; padding: clamp(5rem, 9vw, 9rem) var(--pad); display: grid;
   grid-template-columns: .92fr 1.08fr; gap: clamp(3rem, 8vw, 9rem); align-items: center;
-  background: var(--gold); color: var(--ink); border-bottom: 1px solid var(--ink);
+  background: var(--paper); color: var(--ink); border-bottom: 1px solid var(--ink);
 }
 .juice-intro .kicker { color: var(--ink); }
 .juice-intro h2 { font-size: clamp(4.6rem, 9vw, 9rem); }
-.juice-intro h2 em { color: var(--white); font-style: normal; }
+.juice-intro h2 em { color: var(--gold); font-style: normal; }
 .juice-intro > p:not(.kicker) { max-width: 540px; margin: 2rem 0; color: #48433a; font-size: 1rem; line-height: 1.7; }
-.juice-intro .text-link:hover { color: var(--white); }
-.juice-menu { position: relative; padding: clamp(1.4rem, 3.5vw, 3rem); background: var(--ink); color: var(--white); box-shadow: 12px 12px 0 rgba(255,255,255,.95); }
+.juice-intro .text-link:hover { color: #8b6714; }
+.juice-menu { position: relative; padding: clamp(1.4rem, 3.5vw, 3rem); background: var(--ink); color: var(--white); box-shadow: 12px 12px 0 var(--gold); }
 .juice-menu-heading { padding-bottom: 1.4rem; display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid var(--gold); }
 .juice-menu-heading span { color: var(--gold); font-family: var(--display); font-size: 1.7rem; text-transform: uppercase; }
 .juice-menu-heading b { color: #8e8a82; font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; }
@@ -276,7 +276,7 @@ h1 em { color: var(--gold); font-style: normal; }
   .hero-media > img { transform: scale(1.05); object-position: center; }
   .section-heading h2, .coach-copy h2, .first-title h2 { font-size: clamp(3.8rem, 18vw, 5.7rem); }
   .juice-intro h2 { font-size: clamp(4.4rem, 20vw, 6rem); }
-  .juice-menu { box-shadow: 6px 6px 0 rgba(255,255,255,.95); }
+  .juice-menu { box-shadow: 6px 6px 0 var(--gold); }
   .juice-item { grid-template-columns: 30px 1fr; }
   .juice-item i { display: none; }
   .class-grid { grid-template-columns: 1fr; }
