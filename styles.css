@@ -69,7 +69,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .eyebrow, .kicker { margin: 0 0 1.2rem; text-transform: uppercase; font-size: .7rem; font-weight: 800; letter-spacing: .16em; }
 .eyebrow { display: flex; align-items: center; gap: .65rem; color: #d4d1c9; }
 .eyebrow span { width: 32px; height: 2px; background: var(--gold); }
-h1, h2 { margin: 0; font-family: var(--display); text-transform: uppercase; letter-spacing: -.025em; font-weight: 800; line-height: .86; }
+h1, h2 { margin: 0; font-family: var(--display); text-transform: uppercase; letter-spacing: -.025em; font-weight: 800; line-height: .75; }
 h1 { font-size: clamp(4.7rem, 9.3vw, 9.8rem); max-width: 760px; }
 h1 em { color: var(--gold); font-style: normal; }
 .hero-intro { margin: 2rem 0 0; max-width: 590px; font-size: clamp(1rem, 1.35vw, 1.25rem); line-height: 1.6; color: #c8c5be; }
