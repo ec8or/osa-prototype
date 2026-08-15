@@ -66,7 +66,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .hero { min-height: calc(100svh - 118px); max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 52% 48%; background: var(--ink); color: var(--white); }
 .hero-copy { padding: clamp(4rem, 8vw, 8rem) var(--pad) 2.5rem; display: flex; flex-direction: column; }
-.eyebrow, .kicker { margin: 0 0 1.2rem; text-transform: uppercase; font-size: .7rem; font-weight: 800; letter-spacing: .16em; }
+.eyebrow, .kicker { margin: 0 0 .2rem; text-transform: uppercase; font-size: .7rem; font-weight: 800; letter-spacing: .16em; }
 .eyebrow { display: flex; align-items: center; gap: .65rem; color: #d4d1c9; }
 .eyebrow span { width: 32px; height: 2px; background: var(--gold); }
 h1, h2 { margin: 0; font-family: var(--display); text-transform: uppercase; letter-spacing: -.025em; font-weight: 800; line-height: .75; }
